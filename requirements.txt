@@ -3,3 +3,4 @@ uvicorn
 gradio
 supabase
 python-dotenv
+requests

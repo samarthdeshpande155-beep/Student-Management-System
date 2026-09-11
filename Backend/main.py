@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from supabase import create_client
 from dotenv import load_dotenv
 from gradio.routes import mount_gradio_app
-from Frontend.app import demo
+from Frontend.app import demo, CUSTOM_CSS
+import gradio as gr
 import os
 
 # Load variables from .env
@@ -123,4 +124,14 @@ def delete_student(student_id: int):
         "data": response.data
     }
 
-app = mount_gradio_app(app, demo, path="/")
+app = mount_gradio_app(
+    app,
+    demo,
+    path="/",
+    css=CUSTOM_CSS,
+    theme=gr.themes.Base(
+    primary_hue="blue",
+    secondary_hue="slate",
+    neutral_hue="slate"
+)
+)

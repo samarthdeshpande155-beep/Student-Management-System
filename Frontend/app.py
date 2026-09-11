@@ -24,116 +24,133 @@ CUSTOM_CSS = """
 ========================================================= */
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif !important;
-    background: #f5f7fb !important;
+    background: #f4f7fb !important;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif !important;
 }
 
 .gradio-container {
-    max-width: 1500px !important;
+    max-width: 1250px !important;
     margin: auto !important;
+    padding: 0 24px 30px 24px !important;
 }
 
 
 /* =========================================================
-   MAIN HEADER
+   TOP HEADER
 ========================================================= */
 
-.main-header {
+.top-header {
     background: linear-gradient(
         135deg,
-        #172554,
-        #1d4ed8
+        #0f172a,
+        #1e3a8a
     );
 
     color: white;
 
-    padding: 25px 30px;
+    padding: 26px 30px;
 
-    border-radius: 18px;
+    border-radius: 0 0 18px 18px;
 
-    margin-bottom: 20px;
+    margin-bottom: 28px;
 
     box-shadow:
-        0 8px 25px rgba(30, 64, 175, 0.18);
+        0 8px 25px rgba(15, 23, 42, 0.12);
 }
 
-.main-header h1 {
+.header-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.header-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.header-logo {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.14);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+.header-title {
+    font-size: 25px;
+
+    font-weight: 750;
+
     margin: 0;
-
-    font-size: 30px !important;
-
-    font-weight: 700 !important;
-
-    color: white !important;
 }
 
-.main-header p {
-    margin: 7px 0 0 0;
+.header-subtitle {
+    color: #cbd5e1;
 
-    color: #dbeafe !important;
+    font-size: 13px;
 
-    font-size: 14px !important;
+    margin-top: 4px;
 }
 
+.header-status {
+    background: rgba(255,255,255,0.12);
 
-/* =========================================================
-   SIDEBAR
-========================================================= */
+    border: 1px solid rgba(255,255,255,0.18);
 
-.sidebar {
-    background: white;
+    color: #dbeafe;
 
-    border: 1px solid #e2e8f0;
+    padding: 8px 13px;
 
-    border-radius: 16px;
+    border-radius: 20px;
 
-    padding: 20px;
-
-    min-height: 500px;
-
-    box-shadow:
-        0 4px 16px rgba(15, 23, 42, 0.05);
-}
-
-.sidebar-title {
-    font-size: 18px;
-
-    font-weight: 700;
-
-    color: #172554;
-
-    margin-bottom: 5px;
-}
-
-.sidebar-subtitle {
     font-size: 12px;
 
-    color: #64748b;
-
-    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 
 /* =========================================================
-   WELCOME
+   PAGE INTRO
 ========================================================= */
 
-.welcome-title {
-    font-size: 28px;
-
-    font-weight: 700;
-
-    color: #172554;
-
-    margin-bottom: 5px;
+.page-intro {
+    margin-bottom: 22px;
 }
 
-.welcome-text {
+.page-intro h1 {
+    color: #0f172a;
+
+    font-size: 28px;
+
+    font-weight: 750;
+
+    margin: 0 0 5px 0;
+}
+
+.page-intro p {
     color: #64748b;
 
     font-size: 14px;
 
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 
@@ -146,20 +163,29 @@ body {
 
     border: 1px solid #e2e8f0;
 
-    border-radius: 15px;
+    border-radius: 14px;
 
-    padding: 20px;
+    padding: 19px;
 
-    min-height: 115px;
+    min-height: 118px;
 
     box-shadow:
-        0 4px 16px rgba(15, 23, 42, 0.05);
+        0 3px 12px rgba(15, 23, 42, 0.05);
+
+    transition: 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(15, 23, 42, 0.08);
 }
 
 .stat-icon {
-    font-size: 24px;
+    font-size: 23px;
 
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .stat-label {
@@ -167,98 +193,82 @@ body {
 
     font-size: 12px;
 
-    font-weight: 600;
+    font-weight: 650;
 
     text-transform: uppercase;
+
+    letter-spacing: 0.3px;
 }
 
 .stat-value {
-    color: #172554;
+    color: #0f172a;
 
-    font-size: 30px;
+    font-size: 28px;
 
-    font-weight: 700;
+    font-weight: 750;
 
     margin-top: 4px;
 }
 
 
 /* =========================================================
-   CONTENT CARD
+   MAIN CONTENT CARD
 ========================================================= */
 
 .content-card {
-    background: white;
+    background: white !important;
 
-    border: 1px solid #e2e8f0;
+    border: 1px solid #e2e8f0 !important;
 
-    border-radius: 16px;
+    border-radius: 15px !important;
 
-    padding: 22px;
+    padding: 23px !important;
+
+    margin-top: 20px !important;
 
     box-shadow:
-        0 4px 16px rgba(15, 23, 42, 0.04);
+        0 3px 12px rgba(15, 23, 42, 0.04) !important;
 }
 
+.section-heading {
+    color: #0f172a;
 
-/* =========================================================
-   SECTION TITLE
-========================================================= */
-
-.section-title {
-    font-size: 21px;
+    font-size: 19px;
 
     font-weight: 700;
-
-    color: #172554;
 
     margin-bottom: 4px;
 }
 
-.section-subtitle {
-    font-size: 13px;
-
+.section-description {
     color: #64748b;
+
+    font-size: 13px;
 
     margin-bottom: 18px;
 }
 
 
 /* =========================================================
-   INFO BOX
+   TABS
 ========================================================= */
 
-.info-box {
-    background: #eff6ff;
-
-    border: 1px solid #bfdbfe;
-
-    border-radius: 10px;
-
-    padding: 13px 15px;
-
-    color: #1e40af;
-
-    font-size: 13px;
+.tabs-container {
+    margin-top: 24px;
 }
 
+button[role="tab"] {
+    font-weight: 650 !important;
 
-/* =========================================================
-   WARNING BOX
-========================================================= */
+    color: #64748b !important;
 
-.warning-box {
-    background: #fff7ed;
+    border-radius: 8px !important;
+}
 
-    border: 1px solid #fed7aa;
+button[role="tab"][aria-selected="true"] {
+    color: #1d4ed8 !important;
 
-    border-radius: 10px;
-
-    padding: 13px 15px;
-
-    color: #9a3412;
-
-    font-size: 13px;
+    border-bottom: 2px solid #2563eb !important;
 }
 
 
@@ -269,7 +279,39 @@ body {
 button {
     border-radius: 9px !important;
 
-    font-weight: 600 !important;
+    font-weight: 650 !important;
+}
+
+.primary-btn button {
+    background: #2563eb !important;
+
+    color: white !important;
+
+    border: none !important;
+}
+
+.primary-btn button:hover {
+    background: #1d4ed8 !important;
+}
+
+.delete-btn button {
+    background: #dc2626 !important;
+
+    color: white !important;
+
+    border: none !important;
+}
+
+.delete-btn button:hover {
+    background: #b91c1c !important;
+}
+
+.secondary-btn button {
+    background: #f1f5f9 !important;
+
+    color: #334155 !important;
+
+    border: 1px solid #cbd5e1 !important;
 }
 
 
@@ -278,8 +320,89 @@ button {
 ========================================================= */
 
 input,
-textarea {
+textarea,
+.gr-input {
     border-radius: 9px !important;
+
+    border-color: #cbd5e1 !important;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb !important;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.12) !important;
+}
+
+
+/* =========================================================
+   INFORMATION BOX
+========================================================= */
+
+.info-box {
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+
+    color: #1e40af;
+
+    padding: 13px 15px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    margin: 15px 0;
+}
+
+
+/* =========================================================
+   WARNING BOX
+========================================================= */
+
+.warning-box {
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    color: #991b1b;
+
+    padding: 13px 15px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    margin: 15px 0;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-card {
+    background: white !important;
+
+    border: 1px solid #e2e8f0 !important;
+
+    border-radius: 15px !important;
+
+    padding: 22px !important;
+
+    margin-top: 20px !important;
+}
+
+
+/* =========================================================
+   STATUS MESSAGE
+========================================================= */
+
+.status-message textarea {
+    background: #f8fafc !important;
+
+    font-weight: 600 !important;
 }
 
 
@@ -287,14 +410,22 @@ textarea {
    FOOTER
 ========================================================= */
 
-.footer {
+.app-footer {
     text-align: center;
 
-    padding: 25px 10px;
-
-    color: #64748b;
+    color: #94a3b8;
 
     font-size: 12px;
+
+    padding: 30px 0 10px 0;
+}
+
+.app-footer hr {
+    border: none;
+
+    border-top: 1px solid #e2e8f0;
+
+    margin-bottom: 18px;
 }
 
 
@@ -302,18 +433,24 @@ textarea {
    MOBILE
 ========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
-    .main-header {
-        padding: 20px;
+    .gradio-container {
+        padding: 0 12px 20px 12px !important;
     }
 
-    .main-header h1 {
-        font-size: 24px !important;
+    .header-content {
+        flex-direction: column;
+
+        align-items: flex-start;
     }
 
-    .welcome-title {
-        font-size: 23px;
+    .header-status {
+        align-self: flex-start;
+    }
+
+    .page-intro h1 {
+        font-size: 24px;
     }
 
 }
@@ -376,7 +513,6 @@ def calculate_stats(students):
     total = len(students)
 
     if total == 0:
-
         return 0, 0, 0
 
     marks = [
@@ -510,6 +646,15 @@ def add_student(name, course, marks):
 
     try:
 
+        marks = int(marks)
+
+        if marks < 0 or marks > 100:
+
+            return (
+                "⚠️ Marks must be between 0 and 100.",
+                *refresh_dashboard()
+            )
+
         response = requests.post(
 
             f"{API_URL}/students",
@@ -517,7 +662,7 @@ def add_student(name, course, marks):
             params={
                 "name": name.strip(),
                 "course": course.strip(),
-                "marks": int(marks)
+                "marks": marks
             },
 
             timeout=10
@@ -532,6 +677,13 @@ def add_student(name, course, marks):
 
         return (
             f"❌ Failed to add student: {response.text}",
+            *refresh_dashboard()
+        )
+
+    except ValueError:
+
+        return (
+            "⚠️ Marks must be a valid number.",
             *refresh_dashboard()
         )
 
@@ -584,14 +736,25 @@ def update_student(
 
     try:
 
+        student_id = int(student_id)
+
+        marks = int(marks)
+
+        if marks < 0 or marks > 100:
+
+            return (
+                "⚠️ Marks must be between 0 and 100.",
+                *refresh_dashboard()
+            )
+
         response = requests.put(
 
-            f"{API_URL}/students/{int(student_id)}",
+            f"{API_URL}/students/{student_id}",
 
             params={
                 "name": name.strip(),
                 "course": course.strip(),
-                "marks": int(marks)
+                "marks": marks
             },
 
             timeout=10
@@ -606,6 +769,13 @@ def update_student(
 
         return (
             f"❌ Failed to update student: {response.text}",
+            *refresh_dashboard()
+        )
+
+    except ValueError:
+
+        return (
+            "⚠️ Student ID and marks must be valid numbers.",
             *refresh_dashboard()
         )
 
@@ -632,9 +802,11 @@ def delete_student(student_id):
 
     try:
 
+        student_id = int(student_id)
+
         response = requests.delete(
 
-            f"{API_URL}/students/{int(student_id)}",
+            f"{API_URL}/students/{student_id}",
 
             timeout=10
         )
@@ -651,6 +823,13 @@ def delete_student(student_id):
             *refresh_dashboard()
         )
 
+    except ValueError:
+
+        return (
+            "⚠️ Student ID must be a valid number.",
+            *refresh_dashboard()
+        )
+
     except Exception as e:
 
         return (
@@ -660,14 +839,20 @@ def delete_student(student_id):
 
 
 # =========================================================
-# INITIAL DATA
+# EMPTY INITIAL VALUES
 # =========================================================
 
-initial_students = get_students()
+# IMPORTANT:
+#
+# Do not call get_students() here.
+#
+# FastAPI imports this file while the server is starting.
+# At that moment the API may not yet be available.
+#
+# The actual database data is loaded using demo.load()
+# after the browser opens.
 
-initial_total, initial_average, initial_highest = calculate_stats(
-    initial_students
-)
+EMPTY_TABLE = []
 
 
 # =========================================================
@@ -675,31 +860,68 @@ initial_total, initial_average, initial_highest = calculate_stats(
 # =========================================================
 
 with gr.Blocks(
-    title="Student Management System",
-    css=CUSTOM_CSS,
-    theme=gr.themes.Soft(
-        primary_hue="blue",
-        secondary_hue="slate",
-        neutral_hue="slate"
-    )
+    title="StudentHub"
 ) as demo:
 
 
     # =====================================================
-    # HEADER
+    # TOP HEADER
     # =====================================================
 
     gr.HTML(
         """
-        <div class="main-header">
+        <div class="top-header">
+
+            <div class="header-content">
+
+                <div class="header-left">
+
+                    <div class="header-logo">
+                        🎓
+                    </div>
+
+                    <div>
+
+                        <div class="header-title">
+                            StudentHub
+                        </div>
+
+                        <div class="header-subtitle">
+                            Student Management System
+                            • Academic Record Management
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="header-status">
+                    ● System Online
+                </div>
+
+            </div>
+
+        </div>
+        """
+    )
+
+
+    # =====================================================
+    # PAGE INTRODUCTION
+    # =====================================================
+
+    gr.HTML(
+        """
+        <div class="page-intro">
 
             <h1>
-                🎓 StudentHub
+                Student Dashboard
             </h1>
 
             <p>
-                Student Management System
-                • Academic Record Management
+                Manage student records, courses and academic
+                performance from one place.
             </p>
 
         </div>
@@ -708,139 +930,72 @@ with gr.Blocks(
 
 
     # =====================================================
-    # MAIN LAYOUT
+    # STATISTICS
     # =====================================================
 
-    with gr.Row(equal_height=False):
+    with gr.Row():
+
+        total_students = gr.HTML(
+            total_card(0),
+            scale=1
+        )
+
+        average_marks = gr.HTML(
+            average_card(0),
+            scale=1
+        )
+
+        highest_marks = gr.HTML(
+            highest_card(0),
+            scale=1
+        )
+
+
+    # =====================================================
+    # NAVIGATION TABS
+    # =====================================================
+
+    with gr.Tabs(
+        elem_classes="tabs-container"
+    ):
 
 
         # =================================================
-        # SIDEBAR
+        # DASHBOARD TAB
         # =================================================
 
-        with gr.Column(
-            scale=1,
-            min_width=220
-        ):
-
-            gr.HTML(
-                """
-                <div class="sidebar">
-
-                    <div class="sidebar-title">
-                        StudentHub
-                    </div>
-
-                    <div class="sidebar-subtitle">
-                        Management Panel
-                    </div>
-
-                </div>
-                """
-            )
-
-            dashboard_button = gr.Button(
-                "🏠  Dashboard",
-                variant="primary"
-            )
-
-            add_nav_button = gr.Button(
-                "➕  Add Student"
-            )
-
-            update_nav_button = gr.Button(
-                "✏️  Update Student"
-            )
-
-            delete_nav_button = gr.Button(
-                "🗑️  Delete Student"
-            )
-
-            refresh_nav_button = gr.Button(
-                "🔄  Refresh Data"
-            )
-
-
-        # =================================================
-        # MAIN CONTENT
-        # =================================================
-
-        with gr.Column(
-            scale=5
-        ):
-
-
-            # =============================================
-            # WELCOME
-            # =============================================
-
-            gr.HTML(
-                """
-                <div class="welcome-title">
-                    Welcome to StudentHub 👋
-                </div>
-
-                <div class="welcome-text">
-                    Manage student information,
-                    academic records and marks from one place.
-                </div>
-                """
-            )
-
-
-            # =============================================
-            # STATISTICS
-            # =============================================
-
-            with gr.Row():
-
-                total_students = gr.HTML(
-                    total_card(initial_total)
-                )
-
-                average_marks = gr.HTML(
-                    average_card(initial_average)
-                )
-
-                highest_marks = gr.HTML(
-                    highest_card(initial_highest)
-                )
-
-
-            gr.Markdown("")
-
-
-            # =============================================
-            # DASHBOARD TABLE
-            # =============================================
+        with gr.Tab("📋 Student Records"):
 
             with gr.Group(
-                elem_classes="content-card"
+                elem_classes="table-card"
             ):
 
                 gr.HTML(
                     """
-                    <div class="section-title">
+                    <div class="section-heading">
                         Student Records
                     </div>
 
-                    <div class="section-subtitle">
-                        View all students currently stored
-                        in the database.
+                    <div class="section-description">
+                        View all student records currently
+                        stored in the database.
                     </div>
                     """
                 )
 
-                refresh_button = gr.Button(
-                    "🔄 Refresh Student Records",
-                    variant="primary"
-                )
+
+                with gr.Row():
+
+                    refresh_button = gr.Button(
+                        "🔄 Refresh Records",
+                        variant="primary",
+                        elem_classes="primary-btn"
+                    )
+
 
                 students_table = gr.Dataframe(
 
-                    value=format_students(
-                        initial_students
-                    ),
+                    value=EMPTY_TABLE,
 
                     headers=[
                         "Student ID",
@@ -862,12 +1017,11 @@ with gr.Blocks(
                 )
 
 
-            gr.Markdown("")
+        # =================================================
+        # ADD STUDENT TAB
+        # =================================================
 
-
-            # =============================================
-            # ADD STUDENT
-            # =============================================
+        with gr.Tab("➕ Add Student"):
 
             with gr.Group(
                 elem_classes="content-card"
@@ -875,12 +1029,12 @@ with gr.Blocks(
 
                 gr.HTML(
                     """
-                    <div class="section-title">
-                        ➕ Add New Student
+                    <div class="section-heading">
+                        Add New Student
                     </div>
 
-                    <div class="section-subtitle">
-                        Register a new student in the database.
+                    <div class="section-description">
+                        Register a new student in the system.
                     </div>
 
                     <div class="info-box">
@@ -889,8 +1043,6 @@ with gr.Blocks(
                     </div>
                     """
                 )
-
-                gr.Markdown("")
 
 
                 with gr.Row():
@@ -902,7 +1054,7 @@ with gr.Blocks(
 
                     add_course = gr.Textbox(
                         label="Course",
-                        placeholder="Enter course"
+                        placeholder="Example: Computer Science"
                     )
 
 
@@ -916,22 +1068,23 @@ with gr.Blocks(
 
                 add_button = gr.Button(
                     "➕ Register Student",
-                    variant="primary"
+                    variant="primary",
+                    elem_classes="primary-btn"
                 )
 
 
                 add_status = gr.Textbox(
                     label="System Message",
-                    interactive=False
+                    interactive=False,
+                    elem_classes="status-message"
                 )
 
 
-            gr.Markdown("")
+        # =================================================
+        # UPDATE STUDENT TAB
+        # =================================================
 
-
-            # =============================================
-            # UPDATE STUDENT
-            # =============================================
+        with gr.Tab("✏️ Update Student"):
 
             with gr.Group(
                 elem_classes="content-card"
@@ -939,22 +1092,21 @@ with gr.Blocks(
 
                 gr.HTML(
                     """
-                    <div class="section-title">
-                        ✏️ Update Student
+                    <div class="section-heading">
+                        Update Student
                     </div>
 
-                    <div class="section-subtitle">
-                        Modify an existing student record.
+                    <div class="section-description">
+                        Modify the details of an existing
+                        student record.
                     </div>
 
                     <div class="info-box">
-                        🔎 Enter the Student ID and
-                        updated information.
+                        🔎 Enter the Student ID along with
+                        the updated information.
                     </div>
                     """
                 )
-
-                gr.Markdown("")
 
 
                 update_id = gr.Number(
@@ -968,7 +1120,7 @@ with gr.Blocks(
 
                     update_name = gr.Textbox(
                         label="Student Name",
-                        placeholder="Updated name"
+                        placeholder="Updated student name"
                     )
 
                     update_course = gr.Textbox(
@@ -987,22 +1139,23 @@ with gr.Blocks(
 
                 update_button = gr.Button(
                     "✏️ Update Student",
-                    variant="primary"
+                    variant="primary",
+                    elem_classes="primary-btn"
                 )
 
 
                 update_status = gr.Textbox(
                     label="System Message",
-                    interactive=False
+                    interactive=False,
+                    elem_classes="status-message"
                 )
 
 
-            gr.Markdown("")
+        # =================================================
+        # DELETE STUDENT TAB
+        # =================================================
 
-
-            # =============================================
-            # DELETE STUDENT
-            # =============================================
+        with gr.Tab("🗑️ Delete Student"):
 
             with gr.Group(
                 elem_classes="content-card"
@@ -1010,22 +1163,21 @@ with gr.Blocks(
 
                 gr.HTML(
                     """
-                    <div class="section-title">
-                        🗑️ Delete Student
+                    <div class="section-heading">
+                        Delete Student
                     </div>
 
-                    <div class="section-subtitle">
-                        Permanently remove a student record.
+                    <div class="section-description">
+                        Permanently remove a student record
+                        from the database.
                     </div>
 
                     <div class="warning-box">
-                        ⚠️ This action permanently deletes
-                        the selected record from the database.
+                        ⚠️ Warning: this action permanently
+                        deletes the selected record.
                     </div>
                     """
                 )
-
-                gr.Markdown("")
 
 
                 delete_id = gr.Number(
@@ -1037,13 +1189,15 @@ with gr.Blocks(
 
                 delete_button = gr.Button(
                     "🗑️ Delete Student",
-                    variant="stop"
+                    variant="stop",
+                    elem_classes="delete-btn"
                 )
 
 
                 delete_status = gr.Textbox(
                     label="System Message",
-                    interactive=False
+                    interactive=False,
+                    elem_classes="status-message"
                 )
 
 
@@ -1053,7 +1207,7 @@ with gr.Blocks(
 
     gr.HTML(
         """
-        <div class="footer">
+        <div class="app-footer">
 
             <hr>
 
@@ -1065,7 +1219,7 @@ with gr.Blocks(
 
             <br><br>
 
-            Gradio • FastAPI • Supabase PostgreSQL
+            FastAPI • Gradio • Supabase PostgreSQL
 
         </div>
         """
@@ -1073,7 +1227,27 @@ with gr.Blocks(
 
 
     # =====================================================
-    # REFRESH EVENTS
+    # PAGE LOAD
+    # =====================================================
+
+    demo.load(
+
+        fn=refresh_dashboard,
+
+        inputs=[],
+
+        outputs=[
+            students_table,
+            total_students,
+            average_marks,
+            highest_marks
+        ]
+
+    )
+
+
+    # =====================================================
+    # REFRESH EVENT
     # =====================================================
 
     refresh_button.click(
@@ -1088,21 +1262,7 @@ with gr.Blocks(
             average_marks,
             highest_marks
         ]
-    )
 
-
-    refresh_nav_button.click(
-
-        fn=refresh_dashboard,
-
-        inputs=[],
-
-        outputs=[
-            students_table,
-            total_students,
-            average_marks,
-            highest_marks
-        ]
     )
 
 
@@ -1127,6 +1287,7 @@ with gr.Blocks(
             average_marks,
             highest_marks
         ]
+
     )
 
 
@@ -1152,6 +1313,7 @@ with gr.Blocks(
             average_marks,
             highest_marks
         ]
+
     )
 
 
@@ -1174,6 +1336,7 @@ with gr.Blocks(
             average_marks,
             highest_marks
         ]
+
     )
 
 
@@ -1181,12 +1344,14 @@ with gr.Blocks(
 # IMPORTANT
 # =========================================================
 #
-# DO NOT ADD demo.launch()
+# DO NOT ADD:
 #
-# Backend/main.py imports this demo object and mounts
-# the Gradio application using FastAPI.
+# demo.launch()
 #
-# Run the complete application from the project root:
+# Backend/main.py mounts this Gradio application
+# inside FastAPI.
+#
+# Run from the project root:
 #
 # uvicorn Backend.main:app --reload
 #

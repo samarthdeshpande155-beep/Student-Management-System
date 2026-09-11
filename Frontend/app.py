@@ -1803,7 +1803,7 @@ EMPTY_TABLE = []
 # =========================================================
 
 with gr.Blocks(
-    title="StudentHub"
+    title="Student Management System"
 ) as demo:
 
 
@@ -1826,7 +1826,7 @@ with gr.Blocks(
                     <div>
 
                         <div class="header-title">
-                            StudentHub
+                            Student Management System
                         </div>
 
                         <div class="header-subtitle">
@@ -1840,7 +1840,7 @@ with gr.Blocks(
 
 
                 <div class="header-status">
-                    ● System Online
+                    ● Online System
                 </div>
 
             </div>
@@ -2154,7 +2154,7 @@ with gr.Blocks(
 
             <hr>
 
-            <b>🎓 StudentHub</b>
+            <b>🎓 Student Management System</b>
 
             <br>
 
@@ -2282,20 +2282,3 @@ with gr.Blocks(
 
     )
 
-
-# =========================================================
-# IMPORTANT
-# =========================================================
-#
-# DO NOT ADD:
-#
-# demo.launch()
-#
-# Backend/main.py mounts this Gradio application
-# inside FastAPI.
-#
-# Run from the project root:
-#
-# uvicorn Backend.main:app --reload
-#
-# =========================================================

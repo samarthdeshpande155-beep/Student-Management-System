@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from supabase import create_client
 from dotenv import load_dotenv
+from gradio.routes import mount_gradio_app
+from Frontend.app import demo
 import os
 
 # Load variables from .env
@@ -120,3 +122,5 @@ def delete_student(student_id: int):
         "message": "Student deleted successfully",
         "data": response.data
     }
+
+app = mount_gradio_app(app, demo, path="/")
